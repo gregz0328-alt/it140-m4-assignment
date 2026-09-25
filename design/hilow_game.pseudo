@@ -10,18 +10,42 @@
 
 START hilow_game
 
-    # Establish a valid guessing range.
-    TODO: Obtain the lower and upper bounds.
-    TODO: Repeat as needed until the bounds satisfy the requirement.
+Print "Welcome to the Higher/Lower Game"
 
-    # Establish the number the player is trying to guess.
-    TODO: Generate the required random number from the valid range.
+print "Enter lower bound"
+    input lower_bound
+print "Enter upper bound"
+    input upper_bound
+while lower_bound >= upper_bound
+   print "Error: lower bound should be less than upper bound"
+    print "enter lower bound"
+        input lower_bound
+    print "Enter upper bound"
+        input upper_bound
+end While
 
-    # Play the game.
-    TODO: Obtain and validate a guess using the selected bounds.
-    TODO: Repeat the required game behavior until the correct guess.
-        TODO: Compare a valid guess and provide the required feedback.
-        TODO: Obtain and validate another guess when play continues.
+comp_num = Generate_Random(lowerbound, upperbound)
+
+isGuessed = False
+
+while isGuessed == False DO
+    Print "Enter your Guess"
+    input user_guess
+while user_guess < lower_bound or user_guess > upper_bound DO
+    print "Error: Your guess must be between (lower_bound, upper_bound)"
+    input user_guess
+end while
+
+IF user_guess < comp_num THEN
+    print "Guess too low. Please try again"
+    input user_guess
+elif user_guess > comp_num THEN
+    print "Guess too high. Please try again"
+    input user_guess
+elif user_guess = = comp_num:  
+    print "Congratulations, you are correct!!"
+
+isGuessed = True
 
 END hilow_game
 
